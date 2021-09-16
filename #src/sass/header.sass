@@ -1,0 +1,247 @@
+@import "mixins"
+
+.header
+    display: flex
+    justify-content: center
+    align-items: center
+
+    background: #550ECA
+    grid-area: header
+    z-index: 5
+
+    &__body
+        z-index: 5
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+        @media (min-width: 1440px)
+            width: 1100px
+
+        @media (min-width: 768px) and (max-width: 1439px)
+            width: 85%
+
+        @media (min-width: 426px) and (max-width: 768px)
+            width: 90%
+
+        @media (max-width: 425px)
+            width: 95%
+
+    &-title-block
+        display: flex
+        justify-content: center
+        align-items: center
+
+        &__logo
+            margin: 0px 25px 0px 0px
+
+        &__title
+            font-weight: 500
+            @include adaptive-property ('font-size',20, 14)
+
+    &-actions
+        display: flex
+        justify-content: center
+        align-items: center
+
+        .searchbar
+            @media (max-width: 615px)
+                display: none
+
+.navmenu
+    &__body
+
+    &__list
+        li
+            a
+                display: flex
+                justify-content: center
+                align-items: center
+                padding: 10px 10px 10px 10px
+
+                @include adaptive-property ('font-size',16, 12)
+
+                color: white
+
+                transition: all 0.2s ease 0s
+
+                &:hover
+                    background: #93CBFF
+                    color: #8235FF
+
+    &__submenu-container
+        border: 2px solid #67B6FF
+        border-radius: 8px
+
+        background: #5F5F5F
+
+    &__submenu
+        position: absolute
+        display: none
+        flex-flow: column nowrap
+
+        &.show
+            position: absolute
+            top: 120%
+            left: 50%
+            transform: translateX(-50%)
+            display: block
+
+        li
+            border-bottom: 2px solid #67B6FF
+            &:last-child
+                border: none
+
+            &:first-child
+                a
+                    border-top-right-radius: 5px
+                    border-top-left-radius: 5px
+            &:last-child
+                a
+                    border-bottom-left-radius: 5px
+                    border-bottom-right-radius: 5px
+
+.submenu-open-button
+    position: relative
+    display: flex
+    flex-flow: column wrap
+    justify-content: center
+    align-items: center
+
+    @media (max-width: 425px)
+        display: none
+
+.fullscreen-navmenu
+    position: fixed
+    top: 0
+    left: -100%
+    z-index: -1
+    @include size (100%,100%)
+    @include adaptive-property ('font-size',25, 20)
+    color: #fff
+
+    display: flex
+    flex-flow: column nowrap
+
+    background: #000000ad
+    transition: all 0.5s ease
+
+    &.active
+        left: 0
+
+    &__body
+        display: flex
+        flex-flow: column nowrap
+        align-items: center
+        z-index: 3
+        overflow: auto
+        &:before
+            position: relative
+            top: 0
+            left: 0
+            z-index: 3
+            width: 100%
+            content: url('.')
+            flex: 0 0 100px
+            background: #550ECA
+
+    ul
+        overflow: auto
+        width: 100%
+        li
+            text-align: center
+            padding: 25px 0px 25px 0px
+            margin: 0 auto
+
+            width: 50%
+            cursor: pointer
+            border-bottom: 2px solid #7FC1FF
+
+            &:hover
+                color: #beafaf
+
+            &:last-child
+                border: none
+            a
+                color: #fff
+
+.searchbar
+    display: flex
+
+    background: #5F5F5F
+    height: 50px
+    @include adaptive-property ('margin-right',40,20)
+    border-radius: 7px
+
+    &__input
+        display: block
+        border-top-left-radius: 7px
+        border-bottom-left-radius: 7px
+        padding: 0px 0px 0px 15px
+        background: #5F5F5F
+        color: #fff
+
+        transition: all 0.2s ease
+        &::placeholder
+            color: #fff
+
+        &:focus
+            filter: brightness(110%)
+
+    &__submit
+        padding: 0px 10px 0px 10px
+        transition: all 0.3s ease
+
+        &:hover
+            filter: brightness(120%)
+
+        img
+            @include size (30px,30px)
+
+.search-modal-icon
+    @media (min-width: 615px)
+        display: none
+
+    @include adaptive-property ('margin-right',40,30)
+
+.header__burger
+    display: none
+    border-radius: 0px
+    background-color: transparent
+
+    @media (max-width: 425px)
+        z-index: 5
+        display: flex
+        justify-content: center
+        align-items: center
+
+        width: 40px
+        height: 20px
+
+        border-top: 0.2em solid #7FC1FF
+        border-bottom: 0.2em solid #7FC1FF
+
+        cursor: pointer
+        transition: all 0.5s
+
+        span
+            height: 0.18em
+            width: 100%
+            background-color: #7FC1FF
+            transition: all 0.5s
+
+    &.active
+        // border-color: #000
+        // transform: rotateZ(450deg)
+        // span
+        //     background-color: #000
+
+.logo
+    z-index: 10
+    @include size (60px,55px)
+
+    @media (max-width: 426px)
+        @include size (40px,35px)
+
+    img
+        @include size(100%, 100%)

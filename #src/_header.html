@@ -1,0 +1,51 @@
+<header class="header">
+    <div class="header__body">
+        <div class="header-title-block">
+            <a href="#" class="header-title-block__logo logo">
+                <img src="images/logo.svg" alt="NotSocailNetwork">
+            </a>
+            <span class="header-title-block__title">NotSocailNetwork</span>
+        </div>
+        <div class="header-actions">
+            <form class="searchbar">
+                <input class="searchbar__input" type='text' placeholder='Search...' required>
+                <button class="searchbar__submit" type='submit'>
+                    <img src="images/icons/searchLoupe.svg" alt="search">
+                </button>
+            </form>
+            <button class="search-modal-icon" aria-label="search" data-modal-link="modal_1" type='button'>
+                <img src="images/icons/searchLoupe.svg" alt="searchIcon">
+            </button>
+
+            <button aria-label="submenu-open" class="submenu-open-button">
+                <ul class='navmenu__submenu navmenu__list'>
+                    <div class="navmenu__submenu-container">
+                        <li>
+                            <a target="_blank" rel="noopener" href="#">Login</a>
+                        </li>
+                        <li>
+                            <a target="_blank" rel="noopener" href="#">Register</a>
+                        </li>
+                        <li>
+                            <a target="_blank" rel="noopener" href="#">My publications</a>
+                        </li>
+                    </div>
+                </ul>
+                <img src="images/icons/avatar.svg" alt="avatar">
+            </button>
+            <button type="menu" id="burgerButton" class="header__burger">
+                <span></span>
+            </button>
+        </div>
+
+        <nav class="fullscreen-navmenu">
+            <div class="fullscreen-navmenu__body">
+                <ul>
+                    <li>Login</li>
+                    <li>Register</li>
+                    <li>My publications</li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
