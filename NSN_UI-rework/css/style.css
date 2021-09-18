@@ -97,6 +97,7 @@ h6 {
 @font-face {
   font-family: "Roboto";
   font-display: swap;
+  /* ! Connect font from folder here. */
   src: url("../fonts/Roboto.woff") format("woff"), url("../fonts/Roboto.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
@@ -756,7 +757,7 @@ body button {
   }
 }
 
-@media (min-width: 615px) {
+@media (min-width: 690px) {
   .search-modal-icon {
     display: none;
   }
@@ -774,7 +775,7 @@ body button {
   }
 }
 
-@media (max-width: 615px) {
+@media (max-width: 690px) {
   .header-actions .searchbar {
     display: none;
   }
