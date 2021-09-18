@@ -35,3 +35,27 @@ const activateSubmenuButtons = doc.querySelectorAll('.submenu-open-button');
 for (let submenuButton of activateSubmenuButtons) {
     submenuButton.addEventListener('click', showOrHideSubmenu);
 }
+function showEventWindow(e) {
+    let eventWindow = document.querySelector('#eventWindow');
+
+    eventWindow.classList.add('active');
+    eventWindowIsVisible = true;
+
+    setTimeout(() => {
+        eventWindow.classList.remove('active');
+        eventWindowIsVisible = false;
+    }, 1000)
+}
+let eventWindowIsVisible = false;
+
+let eventButtons = document.querySelectorAll('[data-event-button]');
+for (const eventButton of eventButtons) {
+    eventButton.addEventListener('click', (evArgs) => {
+
+        if (eventWindowIsVisible) {
+            return;
+        } else {
+            showEventWindow(evArgs);
+        }
+    });
+}

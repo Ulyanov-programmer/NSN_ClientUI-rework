@@ -655,6 +655,52 @@ body button {
           flex: 1 0 auto;
 }
 
+.event-window {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 100%);
+      -ms-transform: translate(-50%, 100%);
+          transform: translate(-50%, 100%);
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.event-window.active {
+  -webkit-transform: translate(-50%, 0%);
+      -ms-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+}
+
+.event-window__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #464646;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 15px 30px 15px 30px;
+}
+
+.event-window__body span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 320px;
+  font-size: calc(23px + (24 - 23) * ((100vw - 320px) / (504 - 320)));
+}
+
+.event-window__image {
+  margin: 0px 0px 0px 15px;
+}
+
 @media (min-width: 534px) {
   .container {
     width: 504px;

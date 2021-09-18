@@ -31,7 +31,7 @@
                             </div>
                             <div class="post__footer">
                                 <div class="post__actions">
-                                    <button class="action-button" aria-label='like' type='button'>
+                                    <button data-event-button class="action-button" aria-label='like' type='button'>
                                         <div class='adaptive-image action-button__image'>
                                             <img src="images/icons/Like.svg" alt='like'>
                                         </div>
@@ -41,7 +41,7 @@
                                             <img src="images/icons/comment.svg" alt='comment'>
                                         </div>
                                     </button>
-                                    <button class="action-button" aria-label='add-in-bookmarks' type='button'>
+                                    <button data-event-button class="action-button" aria-label='add-in-bookmarks' type='button'>
                                         <div class='adaptive-image action-button__image'>
                                             <img src="images/icons/bookmark.svg" alt='add-in-bookmarks'>
                                         </div>
@@ -74,7 +74,7 @@
                             </div>
                             <div class="post__footer">
                                 <div class="post__actions">
-                                    <button class="action-button" aria-label='like' type='button'>
+                                    <button data-event-button class="action-button" aria-label='like' type='button'>
                                         <div class='adaptive-image action-button__image'>
                                             <img src="images/icons/Like.svg" alt='like'>
                                         </div>
@@ -84,7 +84,7 @@
                                             <img src="images/icons/comment.svg" alt='comment'>
                                         </div>
                                     </button>
-                                    <button class="action-button" aria-label='add-in-bookmarks' type='button'>
+                                    <button data-event-button class="action-button" aria-label='add-in-bookmarks' type='button'>
                                         <div class='adaptive-image action-button__image'>
                                             <img src="images/icons/bookmark.svg" alt='add-in-bookmarks'>
                                         </div>
@@ -115,6 +115,12 @@
             </div>
         </div>
     </section>
+    <div id="eventWindow" class='event-window'>
+        <div class="event-window__body">
+            <span>You liked this! Added to:
+                <img class="event-window__image action-button__image" src="images/icons/Like.svg" alt='eventImg'></span>
+        </div>
+    </div>
 </body>
 @@include('_scripts.html')
 
