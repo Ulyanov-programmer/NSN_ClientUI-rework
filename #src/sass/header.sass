@@ -14,11 +14,9 @@
         display: flex
         justify-content: space-between
         align-items: center
+        padding: 25px 0px 25px 0px
 
-        @media (min-width: 1440px)
-            width: 1100px
-
-        @media (min-width: 768px) and (max-width: 1439px)
+        @media (min-width: 768px)
             width: 85%
 
         @media (min-width: 426px) and (max-width: 768px)
@@ -37,7 +35,7 @@
 
         &__title
             font-weight: 500
-            @include adaptive-property ('font-size',20, 14)
+            @include adaptive-property ('font-size',18, 14)
 
     &-actions
         display: flex
@@ -59,7 +57,7 @@
                 align-items: center
                 padding: 10px 10px 10px 10px
 
-                @include adaptive-property ('font-size',16, 12)
+                @include adaptive-property ('font-size',14, 12)
 
                 color: white
 
@@ -77,15 +75,21 @@
 
     &__submenu
         position: absolute
-        display: none
+        top: 120%
+        left: 50%
+        transform: translateX(-50%)
+        height: 0
+        opacity: 0
+        visibility: hidden
+        pointer-events: none
         flex-flow: column nowrap
+        transition: all 0.15s ease
 
         &.show
             position: absolute
-            top: 120%
-            left: 50%
-            transform: translateX(-50%)
-            display: block
+            opacity: 1
+            visibility: visible
+            pointer-events: all
 
         li
             border-bottom: 2px solid #67B6FF
@@ -110,6 +114,10 @@
 
     @media (max-width: 425px)
         display: none
+
+    img
+        @include adaptive-property ('width', 50, 48)
+        @include adaptive-property ('height', 50, 48)
 
 .fullscreen-navmenu
     position: fixed
@@ -169,7 +177,7 @@
     display: flex
 
     background: #5F5F5F
-    height: 50px
+    padding: 10px 0px 10px 0px
     @include adaptive-property ('margin-right',40,20)
     border-radius: 7px
 
@@ -178,12 +186,17 @@
         border-top-left-radius: 7px
         border-bottom-left-radius: 7px
         padding: 0px 0px 0px 15px
+        margin: -10px 0px -10px 0px
+
         background: #5F5F5F
         color: #fff
+        @include adaptive-property ('width',100,50)
+        @include adaptive-property ('font-size',13, 12)
 
         transition: all 0.2s ease
         &::placeholder
             color: #fff
+            @include adaptive-property ('font-size',13, 12)
 
         &:focus
             filter: brightness(110%)
@@ -196,7 +209,8 @@
             filter: brightness(120%)
 
         img
-            @include size (30px,30px)
+            @include adaptive-property ('width', 30, 29)
+            @include adaptive-property ('height', 30, 29)
 
 .search-modal-icon
     @media (min-width: 615px)
@@ -238,10 +252,12 @@
 
 .logo
     z-index: 10
-    @include size (60px,55px)
+    @include adaptive-property ('width', 60, 59)
+    @include adaptive-property ('height', 55, 54)
 
     @media (max-width: 426px)
-        @include size (40px,35px)
+        @include adaptive-property ('width', 40, 39)
+        @include adaptive-property ('height', 35, 34)
 
     img
         @include size(100%, 100%)

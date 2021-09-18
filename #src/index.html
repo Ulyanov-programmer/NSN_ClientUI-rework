@@ -11,32 +11,101 @@
     <main class="main">
         <div class="main__body">
             <section class='content'>
-                <div class="content__body">
-                    <div class="block">
-                        <section class='post'>
-                            <!-- <div class="post__image">
-                                <img src="images/logo.png" alt="postLogo">
-                            </div> -->
-                            <div class="post__title">Title</div>
-                            <div class="post__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit,
-                                ipsa? Doloribus error quasi ipsum ipsam distinctio ex iste aspernatur debitis!
-                                Explicabo, excepturi. Repellendus reiciendis assumenda ullam minus quaerat numquam
-                                nihil.</div>
-                            <div class="post__footer">
-                                <span>footer</span>
+                <div class="content__body container">
+                    <article class='post'>
+                        <div class="post__body">
+                            <div class="post__header">
+                                <div class='adaptive-image post__author-avatar'>
+                                    <img src="images/icons/avatar.svg" alt='userName'>
+                                </div>
+                                <span class="post__name">Name</span>
                             </div>
-                        </section>
-                    </div>
+                            <div class='post__image'>
+                                <img src="images/postimg1.jpg" alt='EmmaWatson'>
+                            </div>
+                            <div class="post__main">
+                                <p class="post__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit,
+                                    ipsa? Doloribus error quasi ipsum ipsam distinctio ex iste aspernatur debitis!
+                                    Explicabo, excepturi. Repellendus reiciendis assumenda ullam minus quaerat numquam
+                                    nihil.</p>
+                            </div>
+                            <div class="post__footer">
+                                <div class="post__actions">
+                                    <button class="action-button" aria-label='like' type='button'>
+                                        <div class='adaptive-image action-button__image'>
+                                            <img src="images/icons/Like.svg" alt='like'>
+                                        </div>
+                                    </button>
+                                    <button class="action-button" aria-label='comment' type='button'>
+                                        <div class='adaptive-image action-button__image'>
+                                            <img src="images/icons/comment.svg" alt='comment'>
+                                        </div>
+                                    </button>
+                                    <button class="action-button" aria-label='add-in-bookmarks' type='button'>
+                                        <div class='adaptive-image action-button__image'>
+                                            <img src="images/icons/bookmark.svg" alt='add-in-bookmarks'>
+                                        </div>
+                                    </button>
+                                </div>
+                                <div class="post__more-button">
+                                    <button class="post__more-button more-button" aria-label='more' type='button'>
+                                        More
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class='post'>
+                        <div class="post__body">
+                            <div class="post__header">
+                                <div class='adaptive-image post__author-avatar'>
+                                    <img src="images/postimg2.jpg" alt='userName'>
+                                </div>
+                                <span class="post__name">Name</span>
+                            </div>
+                            <div class='post__image'>
+                                <img src="images/postimg2.jpg" alt='EmmaWatson'>
+                            </div>
+                            <div class="post__main">
+                                <p class="post__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit,
+                                    ipsa? Doloribus error quasi ipsum ipsam distinctio ex iste aspernatur debitis!
+                                    Explicabo, excepturi. Repellendus reiciendis assumenda ullam minus quaerat numquam
+                                    nihil.</p>
+                            </div>
+                            <div class="post__footer">
+                                <div class="post__actions">
+                                    <button class="action-button" aria-label='like' type='button'>
+                                        <div class='adaptive-image action-button__image'>
+                                            <img src="images/icons/Like.svg" alt='like'>
+                                        </div>
+                                    </button>
+                                    <button class="action-button" aria-label='comment' type='button'>
+                                        <div class='adaptive-image action-button__image'>
+                                            <img src="images/icons/comment.svg" alt='comment'>
+                                        </div>
+                                    </button>
+                                    <button class="action-button" aria-label='add-in-bookmarks' type='button'>
+                                        <div class='adaptive-image action-button__image'>
+                                            <img src="images/icons/bookmark.svg" alt='add-in-bookmarks'>
+                                        </div>
+                                    </button>
+                                </div>
+                                <div class="post__more-button">
+                                    <button class="post__more-button more-button" aria-label='more' type='button'>
+                                        More
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </section>
         </div>
     </main>
-    
-    <section id="modal_1" class='modal-window'>
+
+    <section id="search" class='modal-window'>
         <div class="modal-window__body">
             <div class="modal-window__content">
-                <button type='button' class="modal-closer">close me</button>
-    
                 <form class="searchbar">
                     <input class="searchbar__input" type='text' placeholder='Search...' required>
                     <button class="searchbar__submit" type='submit'>

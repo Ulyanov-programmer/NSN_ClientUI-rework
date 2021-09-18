@@ -1,4 +1,4 @@
-$containerWidth: 728
+$containerWidth: 504
 $mainFontColor: white
 $mainFontSize: 18
 $background: #343A40
@@ -8,6 +8,18 @@ $mainFontFamily: Roboto
 @import "mixins"
 @import "fonts"
 @import "header"
+
+.adaptive-image
+    display: block
+    position: relative
+    padding: 0px 0px 100% 0px
+
+    img
+        position: absolute
+        top: 0
+        left: 0
+        @include size (100%,100%)
+        object-fit: cover
 
 body
     height: 100%
@@ -36,26 +48,120 @@ body
     text-align: center
 
     &__body
+        padding: 25px 0px 0px 0px
+
+        article
+            margin: 0px 0px 15% 0px
 
 .post
+    $pcPadding: 20px
+    $mobilePadding: 10px
+
+    &__body
+        background: #5F5F5F
+        padding: $pcPadding
+        border-radius: 7px
+        border: 1px solid #67B6FF
+
+        @media (max-width: $containerWidth + 30 + px)
+            padding: $mobilePadding
+
+    &__header
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        margin: 0px 0px $pcPadding 0px
+        @media (max-width: $containerWidth + 30 + px)
+            margin: 0px 0px $mobilePadding 0px
+
+    &__author-avatar
+        @include adaptive-property ('width', 50, 49)
+        @include adaptive-property ('padding-bottom',50,49)
+        margin: 0px $pcPadding 0px 0px
+        img
+            border-radius: 50%
+
+    &__name
+        @include adaptive-property ('font-size',14, 12)
 
     &__image
+        margin: 0px -20px 28px -20px
+        @media (max-width: $containerWidth + 30 + px)
+            margin: 0px -10px 18px -10px
 
-    &__title
+        img
+            @include size (100%,100%)
+
+    &__main
+        margin: 0px 0px 28px 0px
 
     &__text
+        @include adaptive-property ('font-size',14, 13)
+        text-align: left
+        line-height: 1.3
 
     &__footer
+        display: grid
+        grid-template: '.actions more' 1fr/ 1fr 1fr 1fr
+
+        @media (max-width: $containerWidth + 30 + px)
+            grid-template: 'actions more' 1fr/ 1fr 1fr
+
+    &__actions
+        grid-area: actions
+
+        display: flex
+        justify-content: center
+        align-items: center
+
+        @media (max-width: $containerWidth + 30 + px)
+            justify-content: flex-start
+
+        button
+            margin: 0px 15px 0px 0px
+            padding: 0px 5px 0px 5px
+
+            transition: all 0.2s ease
+            &:hover
+                filter: brightness(1.2)
+
+    &__more-button
+        grid-area: more
+
+        display: flex
+        justify-content: flex-end
+        align-items: center
+
+        button
+            transition: all 0.2s ease
+            &:hover
+                background: #93CBFF
+                color: #7E2FFF
+
+.more-button
+    padding: 7px 34px 7px 34px
+    border: 1px solid #7FC1FF
+    border-radius: 7px
+    color: #7FC1FF
+    @include adaptive-property ('font-size',14, 13)
+
+.action-button
+
+    &__image
+        @include adaptive-property ('width', 30, 29)
+        @include adaptive-property ('height', 30, 29)
 
 .container
+    margin: auto
+
     @media (min-width: 1440px)
+        width: 35%
+
+    @media (min-width: $containerWidth + 30 + px)
         width: $containerWidth + px
 
-    @media (min-width: $containerWidth + px) and (max-width: 1439px)
-        @include size (auto, 50%)
-
-    @media (min-width: 426px) and (max-width: $containerWidth + px)
-        @include size (auto, 50%)
+    @media (min-width: 426px) and (max-width: $containerWidth + 30 + px)
+        @include size (75%, auto)
 
     @media (max-width: 425px)
         width: 95%
@@ -84,14 +190,7 @@ body
         justify-content: center
         align-items: center
 
-.adaptive-image
-    display: block
-    position: relative
-    padding: 0px 0px 100% 0px
-
-    img
-        position: absolute
-        top: 0
-        left: 0
-        @include size (100%,100%)
-        object-fit: cover
+    .searchbar
+        width: 250px
+        input
+            flex: 1 0 auto
