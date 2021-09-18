@@ -115,9 +115,11 @@
     @media (max-width: 425px)
         display: none
 
-    img
+    .avatar
         @include adaptive-property ('width', 50, 48)
         @include adaptive-property ('height', 50, 48)
+        img
+            border-radius: 50%
 
 .fullscreen-navmenu
     position: fixed

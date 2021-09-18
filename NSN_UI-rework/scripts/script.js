@@ -5,7 +5,6 @@ let doc = document;
 let innerWindowWidth = () => window.innerWidth;
 let innerWindowHeight = () => window.innerHeight;
 
-// ? If you see an error here, it's normal.
 // Variables for work modal window 
 // ! I don`t recommend to use references for open and close modal windows.
 
@@ -119,7 +118,7 @@ function showOrHideFullscreenNav(e) {
 const burger = doc.getElementById('burgerButton');
 burger.addEventListener('click', showOrHideFullscreenNav);;
 
-
+// ? THIS IS functions and variables for showing the SUBMENU. //
 function showOrHideSubmenu(e) {
     const menuButton = e.currentTarget;
     const allSubmenu = doc.querySelectorAll('.navmenu__submenu');
@@ -145,6 +144,10 @@ const activateSubmenuButtons = doc.querySelectorAll('.submenu-open-button');
 for (let submenuButton of activateSubmenuButtons) {
     submenuButton.addEventListener('click', showOrHideSubmenu);
 }
+// ? THIS IS functions and variables for showing the SUBMENU. //
+
+
+// ? THIS IS functions and variables for showing the EVENTWINDOW. //
 function showEventWindow(e) {
     let eventWindow = document.querySelector('#eventWindow');
 
@@ -158,10 +161,10 @@ function showEventWindow(e) {
 }
 let eventWindowIsVisible = false;
 
+// Add an data-event-button (in HTML) attribute for all buttons that should activate the eventWindow. //
 let eventButtons = document.querySelectorAll('[data-event-button]');
 for (const eventButton of eventButtons) {
     eventButton.addEventListener('click', (evArgs) => {
-
         if (eventWindowIsVisible) {
             return;
         } else {
@@ -169,3 +172,4 @@ for (const eventButton of eventButtons) {
         }
     });
 }
+// ? THIS IS functions and variables for showing the EVENTWINDOW. //

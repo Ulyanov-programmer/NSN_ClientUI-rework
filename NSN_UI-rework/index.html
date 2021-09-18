@@ -1,1 +1,250 @@
-<!DOCTYPE html><html lang="en"><head>    <meta charset="UTF-8">    <meta http-equiv="X-UA-Compatible" content="IE=edge">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <!-- maximum-scale=1.0, user-scalable=0 does not allow content to be scaled on Android. -->    <!-- Disables forced link for phone number on iOS -->    <meta name="format-detection" content="telephone=no">    <meta name="description" content="description">        <!-- SEO    <meta name="keywords" content="keyword1,">    <meta name="robots" content="none,noindex,nofollow,noimageindex,noarchive,nosnippet">    <meta name="Author" content="Author">    <meta name="Copyright" content="Copyright">    <meta name="Address" content="Address">     <! - Redirect (reload) the page. Delay in seconds; url=Site / page address ->        <meta http-equiv="refresh" content="S; url = URL">    Facebook    <! - site localization, for the Russian-language site ru_RU ->    <meta property="og:locale" content="ru_RU">    <! - content type, default is article ->    <meta property="og:type" content="article">    <! - the title of the page that will be displayed in the post of the social network ->    <meta property="og:title" content="META tags">    <! - page description ->    <meta property="og:description" content="Description of the page about META tags">    <! - link to the image that will be published in the post ->    <meta property="og:image" content="path">    <! - link to the current page ->    <meta property="og: url" content="path">    <! - site name ->    <meta property="og:site_name" content="Freelancer for life">    Twitter    <! - Map type, default is summary ->    <meta name="twitter: card" content="summary">    <! - Author name / login ->    <meta name="twitter: site" content="Ivan">    <! - Page title ->    <meta name="twitter: title" content="META tags">    <! - Page description ->    <meta name="twitter: description" content="about META tags">    <! - Link to image ->    <meta name="twitter: image" content="path">    -->        <link rel="stylesheet" href="css/style.min.css">    <!-- Swiper -->    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->        <title>Main</title></head><body>    <header class="header">    <div class="header__body">        <div class="header-title-block">            <a href="#" class="header-title-block__logo logo">                <picture><source srcset="images/logo.svg" type="image/webp"><img src="images/logo.svg" alt="React"></picture>            </a>            <a href="#" class="header-title-block__logo nsn-logo">                <picture><source srcset="images/NSN_logo.webp" type="image/webp"><img src="images/NSN_logo.png" alt='NotSocailNetwork'></picture>            </a>        </div>        <div class="header-actions">            <form class="searchbar">                <input class="searchbar__input" type='text' placeholder='Search...' required>                <button class="searchbar__submit" type='submit'>                    <picture><source srcset="images/icons/searchLoupe.svg" type="image/webp"><img src="images/icons/searchLoupe.svg" alt="search"></picture>                </button>            </form>            <button class="search-modal-icon" aria-label="search" data-modal-link="search" type='button'>                <picture><source srcset="images/icons/searchLoupe.svg" type="image/webp"><img src="images/icons/searchLoupe.svg" alt="searchIcon"></picture>            </button>            <button aria-label="submenu-open" class="submenu-open-button">                <ul class='navmenu__submenu navmenu__list'>                    <div class="navmenu__submenu-container">                        <li>                            <a target="_blank" rel="noopener" href="#">Login</a>                        </li>                        <li>                            <a target="_blank" rel="noopener" href="#">Register</a>                        </li>                        <li>                            <a target="_blank" rel="noopener" href="#">My publications</a>                        </li>                    </div>                </ul>                <picture><source srcset="images/icons/avatar.svg" type="image/webp"><img src="images/icons/avatar.svg" alt="avatar"></picture>            </button>            <button type="menu" id="burgerButton" class="header__burger">                <span></span>            </button>        </div>        <nav class="fullscreen-navmenu">            <div class="fullscreen-navmenu__body">                <ul>                    <li><a href="#">Login</a></li>                    <li><a href="#">Register</a></li>                    <li><a href="#">My publications</a></li>                </ul>            </div>        </nav>    </div></header>    <main class="main">        <div class="main__body">            <section class='content'>                <div class="content__body container">                    <article class='post'>                        <div class="post__body">                            <div class="post__header">                                <div class='adaptive-image post__author-avatar'>                                    <picture><source srcset="images/icons/avatar.svg" type="image/webp"><img src="images/icons/avatar.svg" alt='userName'></picture>                                </div>                                <span class="post__name">Name</span>                            </div>                            <div class='post__image'>                                <picture><source srcset="images/postimg3.webp" type="image/webp"><img src="images/postimg3.jpg" alt='EmmaWatson'></picture>                            </div>                            <div class="post__main">                                <p class="post__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit,                                    ipsa? Doloribus error quasi ipsum ipsam distinctio ex iste aspernatur debitis!                                    Explicabo, excepturi. Repellendus reiciendis assumenda ullam minus quaerat numquam                                    nihil.</p>                            </div>                            <div class="post__footer">                                <div class="post__actions">                                    <button data-event-button class="action-button" aria-label='like' type='button'>                                        <div class='adaptive-image action-button__image'>                                            <picture><source srcset="images/icons/Like.svg" type="image/webp"><img src="images/icons/Like.svg" alt='like'></picture>                                        </div>                                    </button>                                    <button class="action-button" aria-label='comment' type='button'>                                        <div class='adaptive-image action-button__image'>                                            <picture><source srcset="images/icons/comment.svg" type="image/webp"><img src="images/icons/comment.svg" alt='comment'></picture>                                        </div>                                    </button>                                    <button data-event-button class="action-button" aria-label='add-in-bookmarks' type='button'>                                        <div class='adaptive-image action-button__image'>                                            <picture><source srcset="images/icons/bookmark.svg" type="image/webp"><img src="images/icons/bookmark.svg" alt='add-in-bookmarks'></picture>                                        </div>                                    </button>                                </div>                                <div class="post__more-button">                                    <button class="post__more-button more-button" aria-label='more' type='button'>                                        More                                    </button>                                </div>                            </div>                        </div>                    </article>                    <article class='post'>                        <div class="post__body">                            <div class="post__header">                                <div class='adaptive-image post__author-avatar'>                                    <picture><source srcset="images/postimg2.webp" type="image/webp"><img src="images/postimg2.jpg" alt='userName'></picture>                                </div>                                <span class="post__name">Name</span>                            </div>                            <div class='post__image'>                                <picture><source srcset="images/postimg4.webp" type="image/webp"><img src="images/postimg4.jpg" alt='EmmaWatson'></picture>                            </div>                            <div class="post__main">                                <p class="post__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit,                                    ipsa? Doloribus error quasi ipsum ipsam distinctio ex iste aspernatur debitis!                                    Explicabo, excepturi. Repellendus reiciendis assumenda ullam minus quaerat numquam                                    nihil.</p>                            </div>                            <div class="post__footer">                                <div class="post__actions">                                    <button data-event-button class="action-button" aria-label='like' type='button'>                                        <div class='adaptive-image action-button__image'>                                            <picture><source srcset="images/icons/Like.svg" type="image/webp"><img src="images/icons/Like.svg" alt='like'></picture>                                        </div>                                    </button>                                    <button class="action-button" aria-label='comment' type='button'>                                        <div class='adaptive-image action-button__image'>                                            <picture><source srcset="images/icons/comment.svg" type="image/webp"><img src="images/icons/comment.svg" alt='comment'></picture>                                        </div>                                    </button>                                    <button data-event-button class="action-button" aria-label='add-in-bookmarks' type='button'>                                        <div class='adaptive-image action-button__image'>                                            <picture><source srcset="images/icons/bookmark.svg" type="image/webp"><img src="images/icons/bookmark.svg" alt='add-in-bookmarks'></picture>                                        </div>                                    </button>                                </div>                                <div class="post__more-button">                                    <button class="post__more-button more-button" aria-label='more' type='button'>                                        More                                    </button>                                </div>                            </div>                        </div>                    </article>                </div>            </section>        </div>    </main>    <section id="search" class='modal-window'>        <div class="modal-window__body">            <div class="modal-window__content">                <form class="searchbar">                    <input class="searchbar__input" type='text' placeholder='Search...' required>                    <button class="searchbar__submit" type='submit'>                        <picture><source srcset="images/icons/searchLoupe.svg" type="image/webp"><img src="images/icons/searchLoupe.svg" alt="search"></picture>                    </button>                </form>            </div>        </div>    </section>    <div id="eventWindow" class='event-window'>        <div class="event-window__body">            <span>You liked this! Added to:                <picture><source srcset="images/icons/Like.svg" type="image/webp"><img class="event-window__image action-button__image" src="images/icons/Like.svg" alt='eventImg'></picture></span>        </div>    </div></body><script defer src="scripts/script.min.js"></script><!-- Swiper --><!-- <script type="module">    import Swiper from 'https://unpkg.com/swiper/swiper-bundle.esm.browser.min.js'    const swiper = new Swiper('.swiper-container', {        navigation: {            nextEl: ".swiper-button-next",            prevEl: ".swiper-button-prev",        },    });</script> --></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- maximum-scale=1.0, user-scalable=0 does not allow content to be scaled on Android. -->
+    <!-- Disables forced link for phone number on iOS -->
+    <meta name="format-detection" content="telephone=no">
+
+    <meta name="description" content="description">
+
+    <link rel="stylesheet" href="css/style.min.css">
+
+    <title>Main</title>
+    <!-- ? Enter name of project above. -->
+</head>
+
+<body>
+    <!-- ? HEADER -->
+    <header class="header">
+        <div class="header__body">
+            <div class="header-title-block">
+                <a href="#" class="header-title-block__logo logo">
+                    <picture>
+                        <source srcset="images/logo.svg" type="image/webp"><img src="images/logo.svg" alt="React">
+                    </picture>
+                </a>
+                <a href="#" class="header-title-block__logo nsn-logo">
+                    <picture>
+                        <source srcset="images/NSN_logo.webp" type="image/webp"><img src="images/NSN_logo.png"
+                            alt='NotSocailNetwork'>
+                    </picture>
+                </a>
+            </div>
+            <div class="header-actions">
+                <form class="searchbar">
+                    <input class="searchbar__input" type='text' placeholder='Search...' required>
+                    <button class="searchbar__submit" type='submit'>
+                        <img src="images/icons/searchLoupe.svg" alt="search">
+                    </button>
+                </form>
+                <button class="search-modal-icon" aria-label="search" data-modal-link="search" type='button'>
+                    <img src="images/icons/searchLoupe.svg" alt="searchIcon">
+                </button>
+
+                <button aria-label="submenu-open" class="submenu-open-button">
+                    <ul class='navmenu__submenu navmenu__list'>
+                        <div class="navmenu__submenu-container">
+                            <li>
+                                <a target="_blank" rel="noopener" href="#">Login</a>
+                            </li>
+                            <li>
+                                <a target="_blank" rel="noopener" href="#">Register</a>
+                            </li>
+                            <li>
+                                <a target="_blank" rel="noopener" href="#">My publications</a>
+                            </li>
+                        </div>
+                    </ul>
+                    <div class='adaptive-image avatar'>
+                        <!-- ? USER AVATAR -->
+                        <img src="images/postimg1.jpg" alt='avatar'>
+                        <!-- ? USER AVATAR -->
+                    </div>
+                </button>
+                <button aria-label="menuButton" type="menu" id="burgerButton" class="header__burger">
+                    <span></span>
+                </button>
+            </div>
+            <!-- ? FULLSCREEN NAVMENU -->
+            <nav class="fullscreen-navmenu">
+                <div class="fullscreen-navmenu__body">
+                    <ul>
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#">Register</a></li>
+                        <li><a href="#">My publications</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- ? FULLSCREEN NAVMENU -->
+        </div>
+    </header>
+    <!-- ? HEADER -->
+
+    <main class="main">
+        <div class="main__body">
+            <section class='content'>
+                <div class="content__body container">
+                    <!-- ? POST Component -->
+                    <article class='post'>
+                        <div class="post__body">
+                            <div class="post__header">
+                                <div class='adaptive-image post__author-avatar'>
+                                    <!-- ? USER AVATAR -->
+                                    <img src="images/icons/avatar.svg" alt='userName'>
+                                    <!-- ? USER AVATAR -->
+                                </div>
+                                <!-- ? USER NAME -->
+                                <span class="post__name">Name</span>
+                                <!-- ? USER NAME -->
+                            </div>
+                            <div class='post__image'>
+                                <!-- ? POST IMAGE -->
+                                <img src="images/postimg3.jpg" alt='EmmaWatson'>
+                                <!-- ? POST IMAGE  -->
+                            </div>
+                            <div class="post__main">
+                                <!-- ? POST TEXT  -->
+                                <p class="post__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit,
+                                    ipsa? Doloribus error quasi ipsum ipsam distinctio ex iste aspernatur debitis!
+                                    Explicabo, excepturi. Repellendus reiciendis assumenda ullam minus quaerat numquam
+                                    nihil.</p>
+                                <!-- ? POST TEXT  -->
+                            </div>
+                            <div class="post__footer">
+                                <!-- ? POST BUTTONS  -->
+                                <div class="post__actions">
+                                    <button data-event-button class="action-button" aria-label='like' type='button'>
+                                        <div class='adaptive-image action-button__image'>
+                                            <picture>
+                                                <img src="images/icons/Like.svg" alt='like'>
+                                            </picture>
+                                        </div>
+                                    </button>
+                                    <button class="action-button" aria-label='comment' type='button'>
+                                        <div class='adaptive-image action-button__image'>
+                                            <picture>
+                                                <img src="images/icons/comment.svg" alt='comment'>
+                                            </picture>
+                                        </div>
+                                    </button>
+                                    <button data-event-button class="action-button" aria-label='add-in-bookmarks'
+                                        type='button'>
+                                        <div class='adaptive-image action-button__image'>
+                                            <picture>
+                                                <img src="images/icons/bookmark.svg" alt='add-in-bookmarks'>
+                                            </picture>
+                                        </div>
+                                    </button>
+                                </div>
+                                <div class="post__more-button">
+                                    <button class="post__more-button more-button" aria-label='more' type='button'>
+                                        More
+                                    </button>
+                                </div>
+                                <!-- ? POST BUTTONS  -->
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ? POST Component -->
+                    <article class='post'>
+                        <div class="post__body">
+                            <div class="post__header">
+                                <div class='adaptive-image post__author-avatar'>
+                                    <picture>
+                                        <source srcset="images/postimg2.webp" type="image/webp"><img
+                                            src="images/postimg2.jpg" alt='userName'>
+                                    </picture>
+                                </div>
+                                <span class="post__name">Name</span>
+                            </div>
+                            <div class='post__image'>
+                                <picture>
+                                    <source srcset="images/postimg4.webp" type="image/webp"><img
+                                        src="images/postimg4.jpg" alt='EmmaWatson'>
+                                </picture>
+                            </div>
+                            <div class="post__main">
+                                <p class="post__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit,
+                                    ipsa? Doloribus error quasi ipsum ipsam distinctio ex iste aspernatur debitis!
+                                    Explicabo, excepturi. Repellendus reiciendis assumenda ullam minus quaerat numquam
+                                    nihil.</p>
+                            </div>
+                            <div class="post__footer">
+                                <div class="post__actions">
+                                    <button data-event-button class="action-button" aria-label='like' type='button'>
+                                        <div class='adaptive-image action-button__image'>
+                                            <picture>
+                                                <source srcset="images/icons/Like.svg" type="image/webp"><img
+                                                    src="images/icons/Like.svg" alt='like'>
+                                            </picture>
+                                        </div>
+                                    </button>
+                                    <button class="action-button" aria-label='comment' type='button'>
+                                        <div class='adaptive-image action-button__image'>
+                                            <picture>
+                                                <source srcset="images/icons/comment.svg" type="image/webp"><img
+                                                    src="images/icons/comment.svg" alt='comment'>
+                                            </picture>
+                                        </div>
+                                    </button>
+                                    <button data-event-button class="action-button" aria-label='add-in-bookmarks'
+                                        type='button'>
+                                        <div class='adaptive-image action-button__image'>
+                                            <picture>
+                                                <source srcset="images/icons/bookmark.svg" type="image/webp"><img
+                                                    src="images/icons/bookmark.svg" alt='add-in-bookmarks'>
+                                            </picture>
+                                        </div>
+                                    </button>
+                                </div>
+                                <div class="post__more-button">
+                                    <button class="post__more-button more-button" aria-label='more' type='button'>
+                                        More
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- ? POST Component -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <section id="search" class='modal-window'>
+        <div class="modal-window__body">
+            <div class="modal-window__content">
+                <form class="searchbar">
+                    <input class="searchbar__input" type='text' placeholder='Search...' required>
+                    <button class="searchbar__submit" type='submit'>
+                        <picture>
+                            <source srcset="images/icons/searchLoupe.svg" type="image/webp"><img
+                                src="images/icons/searchLoupe.svg" alt="search">
+                        </picture>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <div id="eventWindow" class='event-window'>
+        <div class="event-window__body">
+            <!-- ? ENTER ANY TEXT   -->
+            <span>You liked this! Added to:
+                <picture>
+                    <!-- ? ENTER ANY ACTION IMAGE -->
+                    <img class="event-window__image action-button__image" src="images/icons/Like.svg" alt='eventImg'>
+                    <!-- ? ENTER ANY ACTION IMAGE -->
+                </picture>
+            </span>
+        </div>
+    </div>
+</body>
+<!-- ? YOU CAN CONNECT NORMAL SCRIPTS to do this delete '.min' below. -->
+<script src="scripts/script.min.js"></script>
+
+</html>

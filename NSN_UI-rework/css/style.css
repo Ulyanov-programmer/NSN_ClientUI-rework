@@ -1,3 +1,4 @@
+/* ? THIS IS null-styles */
 * {
   padding: 0;
   margin: 0;
@@ -90,7 +91,9 @@ h6 {
   font-size: inherit;
   font-weight: 400;
 }
+/* ? THIS IS null-styles */
 
+/* ? THIS IS code for connecting the FONT */
 @font-face {
   font-family: "Roboto";
   font-display: swap;
@@ -98,6 +101,7 @@ h6 {
   font-weight: 400;
   font-style: normal;
 }
+/* ? THIS IS code for connecting the FONT */
 
 .header {
   display: -webkit-box;
@@ -252,9 +256,13 @@ h6 {
           align-items: center;
 }
 
-.submenu-open-button img {
+.submenu-open-button .avatar {
   width: calc(48px + (50 - 48) * ((100vw - 320px) / (504 - 320)));
   height: calc(48px + (50 - 48) * ((100vw - 320px) / (504 - 320)));
+}
+
+.submenu-open-button .avatar img {
+  border-radius: 50%;
 }
 
 .fullscreen-navmenu {
@@ -443,6 +451,7 @@ h6 {
   height: 100%;
 }
 
+/* ? THIS IS GENERAL styles*/
 .adaptive-image {
   display: block;
   position: relative;
@@ -497,7 +506,10 @@ body button {
 .content__body article {
   margin: 0px 0px 15% 0px;
 }
+/* ? THIS IS GENERAL styles*/
 
+
+/* ? THIS IS styles for POSTS*/
 .post__body {
   background: #5F5F5F;
   padding: 20px;
@@ -628,11 +640,14 @@ body button {
   width: calc(29px + (30 - 29) * ((100vw - 320px) / (504 - 320)));
   height: calc(29px + (30 - 29) * ((100vw - 320px) / (504 - 320)));
 }
+/* ? THIS IS styles for POSTS*/
+
 
 .container {
   margin: auto;
 }
 
+/* ? THIS IS styles for MODAL WINDOW*/
 .modal-window {
   position: fixed;
   z-index: 15;
@@ -678,7 +693,9 @@ body button {
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
 }
+/* ? THIS IS styles for MODAL WINDOW*/
 
+/* ? THIS IS styles for MODAL EVENT WINDOW*/
 .event-window {
   position: fixed;
   bottom: 0;
@@ -724,6 +741,8 @@ body button {
 .event-window__image {
   margin: 0px 0px 0px 15px;
 }
+/* ? THIS IS styles for MODAL EVENT WINDOW*/
+
 
 @media (min-width: 425px) {
   .fullscreen-navmenu {
