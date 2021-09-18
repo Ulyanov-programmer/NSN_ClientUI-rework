@@ -647,6 +647,7 @@ body button {
 
 .modal-window .searchbar {
   width: 250px;
+  margin: auto;
 }
 
 .modal-window .searchbar input {
