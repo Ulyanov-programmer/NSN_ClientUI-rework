@@ -45,7 +45,7 @@
         .searchbar
             @media (max-width: 615px)
                 display: none
-
+    
 .navmenu
     &__body
 
@@ -133,6 +133,9 @@
 
     background: #000000ad
     transition: all 0.5s ease
+
+    @media (min-width: 425px)
+        display: none
 
     &.active
         left: 0
@@ -260,6 +263,18 @@
     @media (max-width: 426px)
         @include adaptive-property ('width', 40, 39)
         @include adaptive-property ('height', 35, 34)
+
+    img
+        @include size(100%, 100%)
+
+.nsn-logo
+    z-index: 10
+    width: 200px
+    @include adaptive-property ('height', 55, 54)
+
+    @media (max-width: 500px)
+        width: 120px
+        @include adaptive-property ('height', 40, 39)
 
     img
         @include size(100%, 100%)

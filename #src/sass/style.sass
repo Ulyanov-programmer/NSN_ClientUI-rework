@@ -102,16 +102,13 @@ body
 
     &__footer
         display: grid
-        grid-template: '.actions more' 1fr/ 1fr 1fr 1fr
-
-        @media (max-width: $containerWidth + 30 + px)
-            grid-template: 'actions more' 1fr/ 1fr 1fr
+        grid-template: 'actions more' 1fr/ 1fr 1fr
 
     &__actions
         grid-area: actions
 
         display: flex
-        justify-content: center
+        justify-content: flex-start
         align-items: center
 
         @media (max-width: $containerWidth + 30 + px)
@@ -120,8 +117,14 @@ body
         button
             margin: 0px 15px 0px 0px
             padding: 0px 5px 0px 5px
+            &:first-child
+                margin-left: 0
+                padding-left: 0
+            &:last-child
+                padding-right: 0
+                margin-right: 0
 
-            transition: all 0.2s ease
+                transition: all 0.2s ease
             &:hover
                 filter: brightness(1.2)
 
@@ -171,7 +174,7 @@ body
     z-index: 15
     top: 0
     left: 0
-    background: #00000046
+    background: #00000086
     @include size (100%,100%)
 
     overflow: hidden
@@ -224,4 +227,3 @@ body
 
     &__image
         margin: 0px 0px 0px 15px
-        

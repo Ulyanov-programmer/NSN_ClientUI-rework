@@ -432,6 +432,17 @@ h6 {
   height: 100%;
 }
 
+.nsn-logo {
+  z-index: 10;
+  width: 200px;
+  height: calc(54px + (55 - 54) * ((100vw - 320px) / (504 - 320)));
+}
+
+.nsn-logo img {
+  width: 100%;
+  height: 100%;
+}
+
 .adaptive-image {
   display: block;
   position: relative;
@@ -542,7 +553,7 @@ body button {
 
 .post__footer {
   display: grid;
-  grid-template: '.actions more' 1fr/ 1fr 1fr 1fr;
+  grid-template: 'actions more' 1fr/ 1fr 1fr;
 }
 
 .post__actions {
@@ -550,9 +561,9 @@ body button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -561,6 +572,16 @@ body button {
 .post__actions button {
   margin: 0px 15px 0px 0px;
   padding: 0px 5px 0px 5px;
+}
+
+.post__actions button:first-child {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.post__actions button:last-child {
+  padding-right: 0;
+  margin-right: 0;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
@@ -617,7 +638,7 @@ body button {
   z-index: 15;
   top: 0;
   left: 0;
-  background: #00000046;
+  background: #00000086;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -704,6 +725,12 @@ body button {
   margin: 0px 0px 0px 15px;
 }
 
+@media (min-width: 425px) {
+  .fullscreen-navmenu {
+    display: none;
+  }
+}
+
 @media (min-width: 534px) {
   .container {
     width: 504px;
@@ -747,14 +774,17 @@ body button {
     margin: 0px -10px 18px -10px;
   }
 
-  .post__footer {
-    grid-template: 'actions more' 1fr/ 1fr 1fr;
-  }
-
   .post__actions {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+  }
+}
+
+@media (max-width: 500px) {
+  .nsn-logo {
+    width: 120px;
+    height: calc(39px + (40 - 39) * ((100vw - 320px) / (504 - 320)));
   }
 }
 
